@@ -64,6 +64,10 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        'link' => [
+            public_path('script') => storage_path('app/public/js'),
+        ],
+
     ],
 
 ];

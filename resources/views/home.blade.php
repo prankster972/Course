@@ -39,9 +39,7 @@ and strategic tasks.</p>
       <img src="https://sun9-9.userapi.com/impg/zbN9jXNqlceaA7GlE1-myV5u2E301qq_9oLNCw/tyisNRRQRtk.jpg?size=1895x774&quality=96&sign=6e8245902add048befa0e775ef29f311&type=album" class="img-thumbnail" alt="Sample photo">
       </div>
       
-      <div class="col-md-5 text-left">
-      <a href="/login"><button type="button" class="btn btn-outline-primary">Login</button></a>
-      </div>
+      
     <footer class="text-dark">
       <div class="container">
         <p class="float-right">

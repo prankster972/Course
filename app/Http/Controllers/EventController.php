@@ -20,14 +20,20 @@ class EventController extends Controller
         //dd($req);
        //return view ('eventList');
        //echo $req->input('calendar');
-         
-       return view('eventList');
+       //$reqs;
+       //foreach ($product as $p) {
+         // code
+        // }
+       $req = $req->input('Calendar');
+       return view('eventList', compact('req'));
+       //return view('eventList');
     }
 
-    public function MRList($id)
+    public function MRList(Request $id)
    {
-      $contact = new Contact;
-      return view('event-list-id');
+      dd($req);
+      //$req = 'calendar';
+      //return view('event-list-id');
       
    }
 }

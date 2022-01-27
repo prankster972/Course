@@ -11,8 +11,14 @@ body {
     background: $body-bg;
 }
 
-$spacers: map-merge((
+$spacers: map-merge(
+    (
     6: ($spacer * 4),
-    7: ($spacer * 55)), $spacers);
+    7: ($spacer * 55),
+    8: ($spacer * 10),
+    9: ($spacer * 25),
+    10: ($spacer * 8)
+    ), 
+    $spacers);
 
     @import "bootstrap";

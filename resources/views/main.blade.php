@@ -7,13 +7,6 @@
           <span class="fs-4">Log out</span>
       </a>
 </div>
-     <!-- <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-      </ul> -->
     </header>
 @endsection
 
@@ -25,12 +18,11 @@
 <form action="{{ route('event-list')}}" method="post">
 @csrf
 <p>Choose the date: 
-   <input type="date" name="calendar">
-
+   <input type="date" name="Calendar">
   <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time" list="timeid">
+  <input id="appt-time" name="appt-time" list="timeid">
   <datalist id="timeid">
-  <option value="00:00" label="00:00">
+  <option value="00:00" label="00:00" >
   <option value="00:01" label="00:01">
   <option value="00:02" label="00:02">
   <option value="00:03" label="00:03">
@@ -57,11 +49,12 @@
   <option value="00:24" label="00:24">
 </datalist>
   <span class="validity"></span>
-    <a href ="{{route ('event-list-id', $req->id) }}"><button type="submit" class="btn btn-primary">Create</button></a>
+    <a href ="{{route ('event-list-id') }}"><button type="submit" class="btn btn-primary">Create</button></a>
     <div class = "col-md-5 mb-4">
       <p>Task</p>
     <input class = "pr-5 pb-4" type="text" name="TaskText">
       <div>
   </form>
 
+ 
  @endsection

@@ -19,8 +19,8 @@ class LoginController extends Controller
         );
 
         $validation = $req->validate([
-            'Email' => 'required|email:filter',
-            'Password' => 'required|min:3|max:15',
+            'Email' => 'bail|required',
+            'Password' => 'bail|required|min:3|max:15',
             ]);
                 $i = 0;
             foreach ($mail as $key => $val) {
@@ -32,7 +32,8 @@ class LoginController extends Controller
 
         foreach ($pass as $key => $val) {
             if(($req->input('Password') == $pass [$val]) && ($i == 1))
-            {
+            { 
+                //dd($req);
                 return view('main');
             }
             else
@@ -40,7 +41,7 @@ class LoginController extends Controller
                 return view('login');
             }
         }  
-
+        //dd($req);
         
     }
 

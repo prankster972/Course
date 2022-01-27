@@ -16,7 +16,7 @@ Route::get('/login/submit', 'LoginController@submit') -> name('login-sub');
 Route::post('/main/event', 'EventController@event') -> name('event-ev');
 Route::get('/main/event', 'EventController@event') -> name('event-ev');
 Route::get('/main/event/list', 'EventController@event2') -> name('event-list');
-Route::get('/main/event/list/{id}', 'EventController@MRList') -> name('event-list-id');
+Route::get('/main/event/list1/', 'EventController@MRList') -> name('event-list-id');
 Route::post('/main/event/list', 'EventController@event2') -> name('event-list');
 
 Route::get('/main', function () {
