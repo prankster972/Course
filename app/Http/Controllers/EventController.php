@@ -24,8 +24,12 @@ class EventController extends Controller
        //foreach ($product as $p) {
          // code
         // }
-       $req = $req->input('Calendar');
-       return view('eventList', compact('req'));
+       //$time = $time->input('appt-time');
+       //$data = $data->input('Calendar');
+       //$task = $task->input('TaskText');
+       //$req = $req->input('Calendar');
+       $req = $req->input('appt-time');
+       return view('eventList', compact('req, task'));
        //return view('eventList');
     }
 
