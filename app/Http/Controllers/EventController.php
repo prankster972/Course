@@ -29,7 +29,7 @@ class EventController extends Controller
        //$task = $task->input('TaskText');
        //$req = $req->input('Calendar');
        $req = $req->input('appt-time');
-       return view('eventList', compact('req, task'));
+       return view('eventList', compact('req'));
        //return view('eventList');
     }
 
