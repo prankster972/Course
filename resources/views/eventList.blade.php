@@ -9,7 +9,9 @@
 
 @section('form')
 <form action="{{ route('event-list')}}" method="get">
+
 @csrf
+<button type="button" class="btn btn-light" style="z-index:2; position:absolute; top:55px; left:1350px">-></button>
 <pre><h2 class="mt-4 pt-4">              Monaday   Tuesday    Wednsday  Thursday    Friday   Saturday    Sunday</h3></pre>
 <canvas id="canvas" width="1500" height="800" class="bg-light" style="z-index:1"></canvas>
 <button type="button" class="btn btn-light" style="z-index:2; position:absolute; top:150px; left:30px" id="0" >00:00</button>

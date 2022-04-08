@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
@@ -18,19 +19,11 @@ class EventController extends Controller
     public function event2(Request $req)
     {
         //dd($req);
-       //return view ('eventList');
-       //echo $req->input('calendar');
-       //$reqs;
-       //foreach ($product as $p) {
-         // code
-        // }
-       //$time = $time->input('appt-time');
-       //$data = $data->input('Calendar');
-       //$task = $task->input('TaskText');
-       //$req = $req->input('Calendar');
-       $req = $req->input('appt-time');
-       return view('eventList', compact('req'));
-       //return view('eventList');
+      $week['day'] = $req->input('Calendar'); $week['data'] = $req->input('TaskText');
+      DB::table('weeks')->insert($week);
+      //$req = $req->input('appt-time');
+      return view('eventList', compact('req'));
+       
     }
 
     public function MRList(Request $id)
